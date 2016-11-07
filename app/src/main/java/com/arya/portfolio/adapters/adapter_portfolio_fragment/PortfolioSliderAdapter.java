@@ -22,17 +22,10 @@ import com.arya.portfolio.view_controller.PortfolioSingleActivity;
 
 import java.util.ArrayList;
 
-/**
- * Created by arya on 06/10/16.
- */
-
 public class PortfolioSliderAdapter extends PagerAdapter {
     private ArrayList<PortfolioData> listData;
     private Context mContext;
-    private int pos;
-    PortfolioSingleActivity portfolioSingleActivity;
-    int minHeightSelectedTab = 0;
-
+    private PortfolioSingleActivity portfolioSingleActivity;
     public PortfolioSliderAdapter(ArrayList<PortfolioData> listData, Context ctx, PortfolioSingleActivity portfolioSingleActivity) {
         this.listData = listData;
         this.mContext = ctx;
