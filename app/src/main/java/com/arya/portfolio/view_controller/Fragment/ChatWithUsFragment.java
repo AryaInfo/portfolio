@@ -1,9 +1,7 @@
 package com.arya.portfolio.view_controller.fragment;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,14 +18,9 @@ import com.arya.portfolio.R;
 import java.util.ArrayList;
 import java.util.Observable;
 
-/**
- * Created by user on 12/10/16.
- */
 
 public class ChatWithUsFragment extends AbstractFragment implements View.OnClickListener {
     private View view;
-    private TextView txtStartChat;
-    private AryaConnectClient aryaConnectClient;
 
     @Override
     protected View onCreateViewPost(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -50,13 +43,13 @@ public class ChatWithUsFragment extends AbstractFragment implements View.OnClick
     }
 
     private void init() {
-        txtStartChat = ((TextView) view.findViewById(R.id.txtStartChat));
+        TextView txtStartChat = ((TextView) view.findViewById(R.id.txtStartChat));
         txtStartChat.setOnClickListener(this);
 
         //String android_id = Settings.Secure.getString(getContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
-        TelephonyManager telephonyManager = (TelephonyManager) Env.currentActivity.getSystemService(Context.TELEPHONY_SERVICE);
-        telephonyManager.getDeviceId();
+        /*TelephonyManager telephonyManager = (TelephonyManager) Env.currentActivity.getSystemService(Context.TELEPHONY_SERVICE);
+        telephonyManager.getDeviceId();*/
 
         //long timeStamp= System.currentTimeMillis();
     }
@@ -71,13 +64,12 @@ public class ChatWithUsFragment extends AbstractFragment implements View.OnClick
             default:
                 //do nothing.
                 break;
-
         }
     }
 
     private void openChatScreen() {
         try {
-            aryaConnectClient = AryaConnectClient.getInstance(Env.appContext);
+            AryaConnectClient aryaConnectClient = AryaConnectClient.getInstance(Env.appContext);
             //aryaConnectClient.goToChatUI(Env.currentActivity, Preferences.getUserId(), Preferences.getUserImageUrl(), Preferences.getUserName(), filterUserList());
             aryaConnectClient.goToChatUI(Env.currentActivity, 2, "http://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg", "User", UserList());
             aryaConnectClient.setThemeColor(R.color.color_green);
