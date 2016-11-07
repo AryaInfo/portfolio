@@ -35,7 +35,9 @@ public class PortfolioList extends AbstractFragmentActivity implements View.OnCl
     int position;
     private GridView gvPortfolio;
     private SwipeRefreshLayout swipeRefreshPortfolio;
-    ImageView imgBack, imgBookMarkStar, imgShare;
+    ImageView imgBack,
+            imgBookMarkStar,
+            imgShare;
     TextView txtActionBarTitle;
     String title;
 
@@ -52,7 +54,7 @@ public class PortfolioList extends AbstractFragmentActivity implements View.OnCl
 
     @Override
     public void update(Observable observable, Object o) {
-
+        //do nothing.
     }
 
     private void init() {
@@ -93,6 +95,9 @@ public class PortfolioList extends AbstractFragmentActivity implements View.OnCl
                 /*Intent intent = new Intent();
                 setResult(Activity.RESULT_OK, intent);
                 finish();*/
+                break;
+            default:
+                //do nothing.
                 break;
         }
     }

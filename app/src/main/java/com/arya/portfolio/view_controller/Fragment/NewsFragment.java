@@ -1,4 +1,4 @@
-package com.arya.portfolio.view_controller.Fragment;
+package com.arya.portfolio.view_controller.fragment;
 
 import android.app.Activity;
 import android.content.Intent;

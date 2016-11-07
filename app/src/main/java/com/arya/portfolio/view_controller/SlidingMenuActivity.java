@@ -26,12 +26,12 @@ import com.arya.lib.model.BasicModel;
 import com.arya.lib.view.AbstractFragmentActivity;
 import com.arya.portfolio.R;
 import com.arya.portfolio.utility.Utils;
-import com.arya.portfolio.view_controller.Fragment.ChatWithUsFragment;
-import com.arya.portfolio.view_controller.Fragment.ConnectFragment;
-import com.arya.portfolio.view_controller.Fragment.ExpertiseFragment;
-import com.arya.portfolio.view_controller.Fragment.NewsFragment;
-import com.arya.portfolio.view_controller.Fragment.ProductFragment;
-import com.arya.portfolio.view_controller.Fragment.UseCasesFragment;
+import com.arya.portfolio.view_controller.fragment.ChatWithUsFragment;
+import com.arya.portfolio.view_controller.fragment.ConnectFragment;
+import com.arya.portfolio.view_controller.fragment.ExpertiseFragment;
+import com.arya.portfolio.view_controller.fragment.NewsFragment;
+import com.arya.portfolio.view_controller.fragment.ProductFragment;
+import com.arya.portfolio.view_controller.fragment.UseCasesFragment;
 
 import java.util.Observable;
 
@@ -41,16 +41,23 @@ import java.util.Observable;
 public class SlidingMenuActivity extends AbstractFragmentActivity implements View.OnClickListener, SlidingPaneLayout.PanelSlideListener {
     private SlidingPaneLayout mSlidingPanel;
     private Bundle newsavedInstanceState;
-    public ImageView imgMenu, imgSearch;
-    public View inSearchBar, inActionBar;
-    public TextView txtCancel, txtActionBarTitle;
-    private LinearLayout llExpertise, llProducts, llNews, llUseCases;
+    public ImageView imgMenu,
+            imgSearch;
+    public View inSearchBar,
+            inActionBar;
+    public TextView txtCancel,
+            txtActionBarTitle;
+    private LinearLayout llExpertise,
+            llProducts,
+            llNews,
+            llUseCases;
     public LinearLayout llChatWithUs;
     private int selectedItemPos = 0;
     private LinearLayout llConnect;
     public AutoCompleteTextView autoTxtSearch;
     private Fragment fragment = null;
-    private Animation animShow, animHide;
+    private Animation animShow,
+            animHide;
     private String actionBarTitle;
     private String[] PERMISSIONS = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE};
     public static final int PERMISSION_ALL = 11;
@@ -75,7 +82,8 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
 
     @Override
     public void update(Observable observable, Object o) {
-        //Override update method
+        //Override update method.
+        //do nothing
     }
 
     private void init() {
@@ -194,6 +202,7 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
                 displayView(5);
                 break;
             default:
+                //do nothing
                 break;
         }
     }
@@ -239,6 +248,7 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
                 actionBarTitle = getResources().getString(R.string.titleConnect);
                 break;
             default:
+                //do nothing
                 break;
         }
         replaceFragment(fragment, actionBarTitle);
@@ -268,6 +278,7 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
 
     @Override
     public void onPanelSlide(View panel, float slideOffset) {
+        //do nothing
     }
 
     @Override

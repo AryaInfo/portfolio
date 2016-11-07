@@ -30,7 +30,8 @@ public class SplashActivity extends AbstractFragmentActivity {
 
     @Override
     public void update(Observable observable, Object data) {
-
+        //overide update method.
+        //do nothing.
     }
 
     private void openApp() {

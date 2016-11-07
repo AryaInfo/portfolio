@@ -24,7 +24,8 @@ import java.util.Observable;
 public class IndustrySingleActivity extends AbstractFragmentActivity implements View.OnClickListener {
 
     View inActionBarBack;
-    ImageView imgBack,imgShareSingle;
+    ImageView imgBack,
+            imgShareSingle;
     private ViewPager mPager;
     private PagerAdapter mAdapter;
     private ArrayList<IndustryData> listIndData;
@@ -42,6 +43,7 @@ public class IndustrySingleActivity extends AbstractFragmentActivity implements 
 
     @Override
     public void update(Observable observable, Object o) {
+        //do nothing.
     }
 
     private void init() {
@@ -66,6 +68,9 @@ public class IndustrySingleActivity extends AbstractFragmentActivity implements 
         switch (vId) {
             case R.id.imgBack:
               onBackPressed();
+                break;
+            default:
+                //do nothing.
                 break;
         }
     }

@@ -27,7 +27,9 @@ import java.util.Observable;
 public class NewsSingleActivity extends AbstractFragmentActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
 
     View inActionBarTilte;
-    ImageView imgBack, imgBookMarkStar, imgShare;
+    ImageView imgBack,
+            imgBookMarkStar,
+            imgShare;
     TextView txtActionBarTitle;
     ArrayList<NewsData> listNewsData;
     private ViewPager viewPagerNews;
@@ -46,7 +48,7 @@ public class NewsSingleActivity extends AbstractFragmentActivity implements View
 
     @Override
     public void update(Observable observable, Object o) {
-
+        //do nothing.
     }
 
     private void init() {
@@ -103,6 +105,9 @@ public class NewsSingleActivity extends AbstractFragmentActivity implements View
                 setResult(Activity.RESULT_OK, intent);
                 finish();*/
                 break;
+            default:
+                //do nothing.
+                break;
         }
     }
 
@@ -144,11 +149,11 @@ public class NewsSingleActivity extends AbstractFragmentActivity implements View
 
     @Override
     public void onPageSelected(int position) {
-
+        //do nothing.
     }
 
     @Override
     public void onPageScrollStateChanged(int state) {
-
+        //do nothing.
     }
 }
