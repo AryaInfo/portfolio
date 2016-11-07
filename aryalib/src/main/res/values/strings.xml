@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AryaLib</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="network_error_message">No network available!</string>
+
+</resources>

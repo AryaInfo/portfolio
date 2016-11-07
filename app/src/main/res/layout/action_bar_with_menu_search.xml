@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="@dimen/dimen_25"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_marginRight="@dimen/dimen_12"
+            android:clickable="true"
+            android:src="@mipmap/ic_menu_green" />
+
+        <TextView
+            android:id="@+id/txtActionBarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_150"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textSize="@dimen/font_18"
+            android:textColor="@color/color_green"/>
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="@dimen/dimen_25"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:layout_marginRight="@dimen/dimen_12"
+            android:src="@mipmap/ic_search_green" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_3"
+        android:background="@color/color_light_gray" />
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_5dp">
+
+    <ImageView
+        android:id="@+id/imgFldIcon"
+        android:layout_width="@dimen/qa_taskName_et_H"
+        android:layout_height="@dimen/qa_taskName_et_H"/>
+
+    <TextView
+        android:id="@+id/txtDirName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_5dp"
+        android:layout_toRightOf="@+id/imgFldIcon"
+        android:singleLine="true"
+        android:text="folder"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtFileSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDirName"
+        android:layout_marginTop="@dimen/padding_5dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_toRightOf="@+id/imgFldIcon"
+        android:text="file_size"/>
+
+    <TextView
+        android:id="@+id/txtModifiedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/padding_5dp"
+        android:layout_below="@+id/txtDirName"
+        android:layout_marginLeft="@dimen/padding_5dp"
+        android:text="today"/>
+</RelativeLayout>

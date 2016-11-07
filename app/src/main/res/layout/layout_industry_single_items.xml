@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtConsultingSolutionsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/dimen_10"
+            android:text="@string/consulting_solutions"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_14" />
+
+
+        <com.arya.portfolio.custom.JustifiedTextView
+            android:id="@+id/txtConsultingSolutions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/consulting_solutions"
+            android:textColor="@color/color_dark_black"
+            android:textSize="@dimen/font_14"
+            android:padding="@dimen/dimen_5"
+            android:layout_gravity="left"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_light_gray"
+            android:layout_marginLeft="@dimen/dimen_5"
+            android:layout_marginRight="@dimen/dimen_5"
+            android:layout_marginTop="@dimen/dimen_5"/>
+    </LinearLayout>
+</LinearLayout>

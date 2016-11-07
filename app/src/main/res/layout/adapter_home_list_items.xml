@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_selector"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_5">
+
+    <ImageView
+        android:id="@+id/imgProductPic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_150"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_portfolio_black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_5"
+            android:paddingTop="@dimen/dimen_5"
+            android:text="Product name"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_14"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/imgChatWithUs"
+            android:paddingLeft="@dimen/dimen_5"
+            />
+
+        <ImageView
+            android:id="@+id/imgChatWithUs"
+            android:layout_width="@dimen/dimen_25"
+            android:layout_height="@dimen/dimen_25"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_chat_green"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</LinearLayout>

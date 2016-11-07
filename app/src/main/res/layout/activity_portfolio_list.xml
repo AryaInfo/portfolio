@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/inActionBarTilte"
+        layout="@layout/action_bar_with_title_back_two_icons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshPortfolio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridView
+            android:id="@+id/gvPortfolio"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/color_gray"
+            android:choiceMode="singleChoice"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/dimen_10"
+            android:listSelector="@drawable/list_selector"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/dimen_10" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

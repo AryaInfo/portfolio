@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_gray"
+        android:fillViewport="true"
+        android:padding="@dimen/dimen_8"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgNews"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_250"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_news_black_512" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_5">
+
+
+                <ImageView
+                    android:id="@+id/imgChatWithUs"
+                    android:layout_width="@dimen/dimen_30"
+                    android:layout_height="@dimen/dimen_30"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/dimen_5"
+                    android:src="@mipmap/ic_chat_green"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/imgSupportEmail"
+                    android:layout_width="@dimen/dimen_30"
+                    android:layout_height="@dimen/dimen_30"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/dimen_5"
+                    android:src="@mipmap/ic_email_green"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/txtNewsPubDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:text="Date"
+                    android:textColor="@color/color_dark_black"
+                    android:textSize="@dimen/font_14" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rectangle"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dimen_5"
+                    android:paddingRight="@dimen/dimen_5">
+
+
+                    <com.arya.portfolio.custom.JustifiedTextView
+                        android:id="@+id/txtNewsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dimen_5"
+                        android:text="@string/news"
+                        android:textColor="@color/color_dark_gray"
+                        android:textStyle="bold" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1"
+                        android:background="@color/color_light_gray" />
+
+                    <com.arya.portfolio.custom.JustifiedTextView
+                        android:id="@+id/txtNewsDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dimen_5"
+                        android:text="@string/news"
+                        android:textColor="@color/color_dark_black" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

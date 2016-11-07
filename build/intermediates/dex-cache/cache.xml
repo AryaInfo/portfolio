@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.0.1_0c3cb5dc5debe98371ee90a436d4c834608f6db9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/exploded-aar/com.AryaConnect/AryaConnect/1.0.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="bdd68b8d8e83f927352619f10d2416482425cd7c">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/com.AryaConnect-AryaConnect-1.0.3_be20b75705ab7c610a865a05a18723e977e31650.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/arya/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-s3/2.2.13/1b15445de91b048a6b74506dd8261daf74decdcd/aws-android-sdk-s3-2.2.13.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="1b15445de91b048a6b74506dd8261daf74decdcd">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/aws-android-sdk-s3-2.2.13_6f27c1af99fe6024978b62ba9c261d1d87cd940d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/arya/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.4/5fe28b9518e58819180a43a850fbc0dd24b7c050/commons-lang3-3.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="5fe28b9518e58819180a43a850fbc0dd24b7c050">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/commons-lang3-3.4_00f6bc664b6d0c2610ff6918e36e9003875a6d18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_6b0f6a3ef1553e852b6c440b3675735ad62e9aa8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_09cf0423d05da39faae17c56926fbaeac7839d80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/arya/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_c0672cc764e1c4aa5f0e1861d16fb1b7cb08c0fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/exploded-aar/com.AryaConnect/AryaConnect/1.0.3/jars/libs/org.eclipse.paho.client.mqttv3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="1e202a5aed7e5f2f587c8f29e79e8fa3aba5ed02">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/org.eclipse.paho.client.mqttv3_205cd1e920d7216b38e0f74f45fa39c68e179e17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/arya/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/picasso-2.4.0_1064ad147168d21933619fcc884d3d9f77a7cd0a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/arya/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-core/2.2.13/bcb160fb9cb637c7908e77d473cdbdabdd80e2b9/aws-android-sdk-core-2.2.13.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="bcb160fb9cb637c7908e77d473cdbdabdd80e2b9">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/aws-android-sdk-core-2.2.13_f1a969ab5f56c44ab4eb0ade5880fd80ff2e7a64.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/exploded-aar/arya_portfolio/aryalib/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="4b22778142b628fea00d7e873076f760e16afc1c">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/arya_portfolio-aryalib-unspecified_e7bce1f46485057bafffe7d6a15ab00460825ce6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/gson-2.2.4_d0ce76b63ce905fbab3c5d385c8e1b8692010f19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/arya/Desktop/arya_portfolio/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_9c83615aab1ad1b1f1a433e494e97d0efddf6e08.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtProductNameExpertise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="@dimen/dimen_5"
+            android:text="Product Name"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_16"
+            android:layout_marginLeft="@dimen/dimen_5"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_margin="@dimen/dimen_5"
+            android:background="@color/color_light_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_5"
+            android:layout_marginRight="@dimen/dimen_5"
+            android:orientation="vertical">
+
+            <com.arya.portfolio.custom.JustifiedTextView
+                android:id="@+id/txtProductDetailsExpertise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:ellipsize="end"
+                android:minHeight="@dimen/dimen_50"
+                android:padding="@dimen/dimen_5"
+                android:text="Details..."
+                android:textColor="@color/color_dark_black"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtReadMoreExpertise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:padding="@dimen/dimen_5"
+            android:text="Read More..."
+            android:textColor="@color/color_green"
+            android:textSize="@dimen/font_16" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

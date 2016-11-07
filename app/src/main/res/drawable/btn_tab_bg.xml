@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="-10dp" android:left="-8dp" android:right="-8dp">
+        <shape android:shape="rectangle" >
+            <stroke
+                android:width="3dp"
+                android:color="@color/color_light_green" />  <!-- color of stroke -->
+            <solid android:color="@android:color/transparent" /> <!--background color of box-->
+        </shape>
+    </item>
+
+</layer-list>

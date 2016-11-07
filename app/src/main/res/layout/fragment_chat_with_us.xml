@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_above="@+id/txtStartChat"
+        android:padding="@dimen/dimen_8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_150"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dimen_10"
+            android:src="@mipmap/arya_logo" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@color/color_light_gray" />
+
+        <TextView
+            android:id="@+id/txtAboutData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/haveQuery"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_16" />
+
+    </LinearLayout>
+
+    </ScrollView>
+        <TextView
+            android:id="@+id/txtStartChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/startChat"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_16"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_green"
+            android:layout_margin="@dimen/dimen_10"/>
+
+
+</RelativeLayout>

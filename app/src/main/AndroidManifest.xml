@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.arya.portfolio">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-feature android:name="android.hardware.camera" />
+
+
+    <application
+        android:name=".view_controller.PortfolioApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".view_controller.SplashActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view_controller.SlidingMenuActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name=".view_controller.NewsSingleActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".view_controller.PortfolioSingleActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".view_controller.IndustrySingleActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".view_controller.PortfolioList"
+            android:screenOrientation="portrait"></activity>
+
+        <!-- VedioCapture Activity-->
+        <activity
+            android:name="com.AryaConnect.view.AndroidVideoCaptureActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- ChatActivity -->
+        <activity
+            android:name="com.AryaConnect.view.ChatActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- ChatUserActivity -->
+        <activity
+            android:name="com.AryaConnect.view.ChatUsersActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <meta-data
+            android:name="com.AryaConnect.apiKey"
+            android:value="b2ff18898db431f40143ec942071564c8041119b7c225eea3ba28495ef0236b743caf66235f334d33f161454ab4a0c9c" />
+        <meta-data
+            android:name="com.AryaConnect.apiSecret"
+            android:value="b2ff37208db425f6" />
+
+        <!-- AryaConnect Amazon_s3_pool_id -->
+        <meta-data
+            android:name="com.AryaConnect.amazon_s3_pool_id"
+            android:value="" />
+
+        <!-- AryaConnect Amazon_s3_bucket_name -->
+        <meta-data
+            android:name="com.AryaConnect.amazon_s3_bucket_name"
+            android:value="" />
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+        <!-- Broadcast Receiver For Network changed : -->
+
+        <receiver android:name="com.AryaConnect.receivers.ConnectivityChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
