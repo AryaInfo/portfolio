@@ -21,6 +21,7 @@ import java.util.Observable;
 
 public class ChatWithUsFragment extends AbstractFragment implements View.OnClickListener {
     private View view;
+    String string = "new string";
 
     @Override
     protected View onCreateViewPost(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -61,9 +62,9 @@ public class ChatWithUsFragment extends AbstractFragment implements View.OnClick
             case R.id.txtStartChat:
                 openChatScreen();
                 break;
-            default:
+            /*default:
                 //do nothing.
-                break;
+                break;*/
         }
     }
 
@@ -71,15 +72,15 @@ public class ChatWithUsFragment extends AbstractFragment implements View.OnClick
         try {
             AryaConnectClient aryaConnectClient = AryaConnectClient.getInstance(Env.appContext);
             //aryaConnectClient.goToChatUI(Env.currentActivity, Preferences.getUserId(), Preferences.getUserImageUrl(), Preferences.getUserName(), filterUserList());
-            aryaConnectClient.goToChatUI(Env.currentActivity, 2, "http://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg", "User", UserList());
+            aryaConnectClient.goToChatUI(Env.currentActivity, 2, "http://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg", "User", userList());
             aryaConnectClient.setThemeColor(R.color.color_green);
             aryaConnectClient.setTabTextColor(R.color.white);
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }
 
-    private ArrayList<UserData> UserList() {
+    private ArrayList<UserData> userList() {
         ArrayList<UserData> arrayList = new ArrayList<>();
         UserData aryaSupport = new UserData();
         aryaSupport.userId = 1;
