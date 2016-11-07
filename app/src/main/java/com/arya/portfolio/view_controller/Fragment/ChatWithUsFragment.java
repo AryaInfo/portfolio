@@ -21,7 +21,7 @@ import java.util.Observable;
 
 public class ChatWithUsFragment extends AbstractFragment implements View.OnClickListener {
     private View view;
-    String string = "new string";
+    private String string = "new string";
 
     @Override
     protected View onCreateViewPost(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -62,9 +62,9 @@ public class ChatWithUsFragment extends AbstractFragment implements View.OnClick
             case R.id.txtStartChat:
                 openChatScreen();
                 break;
-            /*default:
+            default:
                 //do nothing.
-                break;*/
+                break;
         }
     }
 
