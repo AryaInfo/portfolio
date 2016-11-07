@@ -44,10 +44,6 @@ public class NewsFragment extends AbstractFragment implements View.OnClickListen
     private SwipeRefreshLayout swipeRefreshNews;
     private ArrayList<NewsData> listAdapter = new ArrayList<>();
     private static final int REQUEST_CODE_NEWS = 102;
-
-    public NewsFragment() {
-    }
-
     @Override
     protected View onCreateViewPost(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (view == null) {
