@@ -52,7 +52,7 @@ public class ConnectFragment extends AbstractFragment implements View.OnClickLis
 
     @Override
     public void update(Observable observable, Object data) {
-
+        //do nothing.
     }
 
     private void init() {
@@ -123,6 +123,9 @@ public class ConnectFragment extends AbstractFragment implements View.OnClickLis
                 url = "http://twitter.com/aryavrat_01";
                 intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);
+                break;
+            default:
+                //do nothing.
                 break;
         }
     }

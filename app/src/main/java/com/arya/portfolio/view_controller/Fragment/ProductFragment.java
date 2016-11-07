@@ -161,7 +161,7 @@ public class ProductFragment extends AbstractFragment implements AdapterView.OnI
 
     @Override
     public void update(Observable observable, Object data) {
-
+        //do nothing.
     }
 
     private void initAnimation() {
@@ -220,6 +220,9 @@ public class ProductFragment extends AbstractFragment implements AdapterView.OnI
         switch (vId) {
             case R.id.imgChatWithUs:
                 Utils.openChatScreen();
+                break;
+            default:
+                //do nothing.
                 break;
         }
     }

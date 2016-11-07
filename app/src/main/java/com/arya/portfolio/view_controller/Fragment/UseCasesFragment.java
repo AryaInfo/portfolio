@@ -187,17 +187,16 @@ public class UseCasesFragment extends AbstractFragment implements View.OnClickLi
             case R.id.imgChatWithUs:
                 Utils.openChatScreen();
                 break;
-
-
+            default:
+                //do nothing.
+                break;
         }
     }
 
 
     private void hideSearchBar() {
-        if (Env.currentActivity instanceof SlidingMenuActivity) {
-            if (((SlidingMenuActivity) Env.currentActivity).inSearchBar.getVisibility() == View.VISIBLE) {
-                ((SlidingMenuActivity) Env.currentActivity).onClick(((SlidingMenuActivity) Env.currentActivity).txtCancel);
-            }
+        if (Env.currentActivity instanceof SlidingMenuActivity && ((SlidingMenuActivity) Env.currentActivity).inSearchBar.getVisibility() == View.VISIBLE) {
+            ((SlidingMenuActivity) Env.currentActivity).onClick(((SlidingMenuActivity) Env.currentActivity).txtCancel);
         }
     }
 
@@ -276,12 +275,12 @@ public class UseCasesFragment extends AbstractFragment implements View.OnClickLi
 
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+        //do nothing.
     }
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+        //do nothing.
     }
 
     @Override

@@ -2,7 +2,6 @@ package com.arya.portfolio.view_controller.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
@@ -47,19 +46,19 @@ public class ChatWithUsFragment extends AbstractFragment implements View.OnClick
 
     @Override
     public void update(Observable observable, Object data) {
-
+        //do nothing.
     }
 
     private void init() {
         txtStartChat = ((TextView) view.findViewById(R.id.txtStartChat));
         txtStartChat.setOnClickListener(this);
 
-        String android_id = Settings.Secure.getString(getContext().getContentResolver(), Settings.Secure.ANDROID_ID);
+        //String android_id = Settings.Secure.getString(getContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
-        TelephonyManager telephonyManager = (TelephonyManager)Env.currentActivity.getSystemService(Context.TELEPHONY_SERVICE);
+        TelephonyManager telephonyManager = (TelephonyManager) Env.currentActivity.getSystemService(Context.TELEPHONY_SERVICE);
         telephonyManager.getDeviceId();
 
-        long timeStamp= System.currentTimeMillis();
+        //long timeStamp= System.currentTimeMillis();
     }
 
     @Override
@@ -70,6 +69,7 @@ public class ChatWithUsFragment extends AbstractFragment implements View.OnClick
                 openChatScreen();
                 break;
             default:
+                //do nothing.
                 break;
 
         }

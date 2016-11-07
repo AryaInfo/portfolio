@@ -124,6 +124,9 @@ public class NewsFragment extends AbstractFragment implements View.OnClickListen
                 setSelectedView(txtFavNews);
                 newsModel.setGetRecentNewsTask("", "favNews", "");
                 break;
+            default:
+                //do nothing.
+                break;
 
         }
     }
@@ -184,11 +187,12 @@ public class NewsFragment extends AbstractFragment implements View.OnClickListen
 
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        //do nothing.
     }
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+        //do nothing.
     }
 
     @Override
@@ -246,10 +250,8 @@ public class NewsFragment extends AbstractFragment implements View.OnClickListen
     }
 
     private void hideSearchBar() {
-        if (Env.currentActivity instanceof SlidingMenuActivity) {
-            if (((SlidingMenuActivity) Env.currentActivity).inSearchBar.getVisibility() == View.VISIBLE) {
-                ((SlidingMenuActivity) Env.currentActivity).onClick(((SlidingMenuActivity) Env.currentActivity).txtCancel);
-            }
+        if (Env.currentActivity instanceof SlidingMenuActivity && ((SlidingMenuActivity) Env.currentActivity).inSearchBar.getVisibility() == View.VISIBLE) {
+            ((SlidingMenuActivity) Env.currentActivity).onClick(((SlidingMenuActivity) Env.currentActivity).txtCancel);
         }
     }
 }

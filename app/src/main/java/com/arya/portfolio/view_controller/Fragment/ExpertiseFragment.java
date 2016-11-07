@@ -86,6 +86,7 @@ public class ExpertiseFragment extends AbstractFragment {
 
     @Override
     public void update(Observable observable, Object data) {
+        //do nothing.
     }
 
 }
