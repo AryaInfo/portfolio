@@ -21,9 +21,6 @@ import com.arya.portfolio.R;
 
 import java.util.Observable;
 
-/**
- * Created by user on 12/10/16.
- */
 
 public class ConnectFragment extends AbstractFragment implements View.OnClickListener {
     private View view;

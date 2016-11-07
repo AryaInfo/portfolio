@@ -30,21 +30,23 @@ import com.arya.portfolio.view_controller.SlidingMenuActivity;
 import java.util.ArrayList;
 import java.util.Observable;
 
-/**
- * Created by user on 14/09/16.
- */
+
 public class NewsFragment extends AbstractFragment implements View.OnClickListener, AdapterView.OnItemClickListener, TextWatcher, SwipeRefreshLayout.OnRefreshListener {
 
-    View view;
-    TextView txtTechnologyNews, txtAryaNews, txtFavNews, txtLastSelectedView;
-    GridView gvNews;
-    NewsModel newsModel = new NewsModel();
-    private String searchString;
+    private View view;
+    private TextView txtTechnologyNews;
+    private TextView txtAryaNews;
+    private TextView txtFavNews;
+    private TextView txtLastSelectedView;
+    private GridView gvNews;
+    private final NewsModel newsModel = new NewsModel();
     private NewsFragmentAdapter newsFragmentAdapter;
     private SwipeRefreshLayout swipeRefreshNews;
-    private ArrayList<NewsData> listTechNews;
     private ArrayList<NewsData> listAdapter = new ArrayList<>();
     private static final int REQUEST_CODE_NEWS = 102;
+
+    public NewsFragment() {
+    }
 
     @Override
     protected View onCreateViewPost(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -188,23 +190,22 @@ public class NewsFragment extends AbstractFragment implements View.OnClickListen
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         //do nothing.
-        //overrided method.
+        //overrid method.
     }
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
         //do nothing.
-        //overrided method.
+        //overrid method.
     }
 
     @Override
     public void afterTextChanged(Editable s) {
-        searchString = s.toString().trim();
+        String searchString = s.toString().trim();
         if (!TextUtils.isEmpty(searchString)) {
             searchByTitle(searchString);
         } else {
-            searchString = null;
-            searchByTitle(searchString);
+            searchByTitle(null);
         }
     }
 

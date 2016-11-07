@@ -9,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -28,18 +26,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Observable;
 
-/**
- * Created by arya on 13/10/16.
- */
 public class ProductFragment extends AbstractFragment implements AdapterView.OnItemClickListener, SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
     private static final int REQUEST_CODE_PRODUCT = 105;
     View view;
     SwipeRefreshLayout swipeRefreshProduct;
     GridView gvProduct;
-    private Animation animShow, animHide;
     private ArrayList<PortfolioData> listProductData = new ArrayList<>();
     private ArrayList<PortfolioData> listProData = new ArrayList<>();
-    private PortfolioAdapter productAdapter;
     ImageView imgChatWithUs;
 
     @Override
@@ -58,7 +51,6 @@ public class ProductFragment extends AbstractFragment implements AdapterView.OnI
         gvProduct = ((GridView) view.findViewById(R.id.gvProduct));
         imgChatWithUs = (ImageView) view.findViewById(R.id.imgChatWithUs);
 
-        initAnimation();
         createProductData();
         setOnClickListener();
         setAdapter(listProductData);
@@ -68,7 +60,7 @@ public class ProductFragment extends AbstractFragment implements AdapterView.OnI
     private void setAdapter(ArrayList<PortfolioData> listProduct) {
         listProData = listProduct;
         Collections.sort(listProData, new PortfolioData());
-        productAdapter = new PortfolioAdapter(getActivity(), listProData);
+        PortfolioAdapter productAdapter = new PortfolioAdapter(getActivity(), listProData);
         gvProduct.setAdapter(productAdapter);
         productAdapter.notifyDataSetChanged();
         swipeRefreshProduct.setRefreshing(false);
@@ -162,11 +154,6 @@ public class ProductFragment extends AbstractFragment implements AdapterView.OnI
     @Override
     public void update(Observable observable, Object data) {
         //do nothing.
-    }
-
-    private void initAnimation() {
-        animShow = AnimationUtils.loadAnimation(Env.currentActivity, R.anim.right_in);
-        animHide = AnimationUtils.loadAnimation(Env.currentActivity, R.anim.right_out);
     }
 
     @Override

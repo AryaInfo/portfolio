@@ -41,25 +41,19 @@ import java.util.Observable;
 
 public class UseCasesFragment extends AbstractFragment implements View.OnClickListener, AdapterView.OnItemClickListener, TextWatcher, SwipeRefreshLayout.OnRefreshListener {
 
-    View view;
-    TextView txtProductEngineering, txtIndustry, txtTechnologyUsed, txtLastSelectedView;
-    GridView gvProductEngineering;
+    private View view;
+    private TextView txtProductEngineering, txtIndustry, txtTechnologyUsed, txtLastSelectedView;
+    private GridView gvProductEngineering;
     private ArrayList<PortfolioData> listProduct = new ArrayList<>();
-    private String searchString;
-    private PortfolioAdapter portfolioAdapter;
-    private IndustryAdapter industryAdapter;
-    private TechnologyAdapter technologyAdapter;
     private PortfolioModel portfolioModel = new PortfolioModel();
-    ArrayList<PortfolioData> listData = new ArrayList<>();
-    ArrayList<IndustryData> listIndustryData = new ArrayList<>();
-    ArrayList<IndustryData> listIndData = new ArrayList<>();
-    ArrayList<TechnologyUsedData> listTechnologyData = new ArrayList<>();
-    ArrayList<TechnologyUsedData> listTechData = new ArrayList<>();
-    ArrayList<PortfolioData> portfolioList = new ArrayList<>();
-    ArrayList<PortfolioData> portfolioListIndustry = new ArrayList<>();
+    private ArrayList<PortfolioData> listData = new ArrayList<>();
+    private ArrayList<IndustryData> listIndustryData = new ArrayList<>();
+    private ArrayList<IndustryData> listIndData = new ArrayList<>();
+    private ArrayList<TechnologyUsedData> listTechnologyData = new ArrayList<>();
+    private  ArrayList<TechnologyUsedData> listTechData = new ArrayList<>();
     private SwipeRefreshLayout swipeRefreshPortfolio;
     private static final int REQUEST_CODE = 100;
-    ImageView imgChatWithUs;
+    private ImageView imgChatWithUs;
 
     @Override
     protected View onCreateViewPost(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -138,7 +132,7 @@ public class UseCasesFragment extends AbstractFragment implements View.OnClickLi
     private void setPortfolioAdapter(ArrayList<PortfolioData> listProductData) {
         listData = listProductData;
         Collections.sort(listData, new PortfolioData());
-        portfolioAdapter = new PortfolioAdapter(getActivity(), listData);
+        PortfolioAdapter portfolioAdapter = new PortfolioAdapter(getActivity(), listData);
         gvProductEngineering.setAdapter(portfolioAdapter);
         portfolioAdapter.notifyDataSetChanged();
         swipeRefreshPortfolio.setRefreshing(false);
@@ -147,7 +141,7 @@ public class UseCasesFragment extends AbstractFragment implements View.OnClickLi
     private void setIndustryAdapter(ArrayList<IndustryData> listIndustryData) {
         listIndData = listIndustryData;
         Collections.sort(listIndData, new IndustryData());
-        industryAdapter = new IndustryAdapter(getActivity(), listIndData);
+        IndustryAdapter industryAdapter = new IndustryAdapter(getActivity(), listIndData);
         gvProductEngineering.setAdapter(industryAdapter);
         industryAdapter.notifyDataSetChanged();
         swipeRefreshPortfolio.setRefreshing(false);
@@ -156,7 +150,7 @@ public class UseCasesFragment extends AbstractFragment implements View.OnClickLi
     private void setTechnologyAdapter(ArrayList<TechnologyUsedData> listTechnologyData) {
         listTechData = listTechnologyData;
         Collections.sort(listTechData, new TechnologyUsedData());
-        technologyAdapter = new TechnologyAdapter(getActivity(), listTechData);
+        TechnologyAdapter technologyAdapter = new TechnologyAdapter(getActivity(), listTechData);
         gvProductEngineering.setAdapter(technologyAdapter);
         technologyAdapter.notifyDataSetChanged();
         swipeRefreshPortfolio.setRefreshing(false);
@@ -231,17 +225,17 @@ public class UseCasesFragment extends AbstractFragment implements View.OnClickLi
             intent.putExtras(bundle);
             startActivityForResult(intent, REQUEST_CODE);*/
             intent = new Intent(getActivity(), PortfolioList.class);
-            String industryCategory = listIndData.get(i).categoryName.toString().trim();
-            portfolioListIndustry = DBManagerAP.getInstance().getProductAccToCategory("", "", industryCategory);
+            String industryCategory = listIndData.get(i).categoryName.trim();
+            ArrayList<PortfolioData> portfolioListIndustry = DBManagerAP.getInstance().getProductAccToCategory("", "", industryCategory);
             bundle.putSerializable("listData", portfolioListIndustry);
-            bundle.putString("title", listIndData.get(i).categoryName);
+            bundle.putString("title", industryCategory);
             bundle.putInt("position", i);
             intent.putExtras(bundle);
             startActivity(intent);
         } else {
             intent = new Intent(getActivity(), PortfolioList.class);
             String technologyName = listTechData.get(i).technologyName.toLowerCase().trim();
-            portfolioList = DBManagerAP.getInstance().getProductAccToCategory("", technologyName, "");
+            ArrayList<PortfolioData> portfolioList = DBManagerAP.getInstance().getProductAccToCategory("", technologyName, "");
             bundle.putSerializable("listData", portfolioList);
             bundle.putString("title", listTechData.get(i).technologyName);
             bundle.putInt("position", i);
@@ -285,12 +279,11 @@ public class UseCasesFragment extends AbstractFragment implements View.OnClickLi
 
     @Override
     public void afterTextChanged(Editable s) {
-        searchString = s.toString().trim();
+        String searchString = s.toString().trim();
         if (!TextUtils.isEmpty(searchString)) {
             searchByTitle(searchString);
         } else {
-            searchString = null;
-            searchByTitle(searchString);
+            searchByTitle(null);
         }
     }
 

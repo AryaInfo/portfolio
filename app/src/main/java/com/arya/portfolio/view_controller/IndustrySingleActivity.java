@@ -17,18 +17,11 @@ import com.arya.portfolio.dao.IndustryData;
 import java.util.ArrayList;
 import java.util.Observable;
 
-/**
- * Created by user on 27/09/16.
- */
-
 public class IndustrySingleActivity extends AbstractFragmentActivity implements View.OnClickListener {
 
     View inActionBarBack;
     ImageView imgBack,
             imgShareSingle;
-    private ViewPager mPager;
-    private PagerAdapter mAdapter;
-    private ArrayList<IndustryData> listIndData;
     int position;
     @Override
     protected void onCreatePost(Bundle savedInstanceState) {
@@ -48,14 +41,14 @@ public class IndustrySingleActivity extends AbstractFragmentActivity implements 
 
     private void init() {
         Bundle bundle = getIntent().getExtras();
-        listIndData = (ArrayList<IndustryData>) bundle.getSerializable("listIndData");
+        ArrayList<IndustryData> listIndData = (ArrayList<IndustryData>) bundle.getSerializable("listIndData");
         position = bundle.getInt("position");
         inActionBarBack = findViewById(R.id.inActionBarBack);
         imgBack = (ImageView) inActionBarBack.findViewById(R.id.imgBack);
         imgShareSingle = (ImageView) inActionBarBack.findViewById(R.id.imgShareSingle);
         imgShareSingle.setVisibility(View.GONE);
-        mPager = (ViewPager) findViewById(R.id.viewPagerIndustry);
-        mAdapter = new IndustrySliderAdapter(listIndData, this);
+        ViewPager mPager = (ViewPager) findViewById(R.id.viewPagerIndustry);
+        PagerAdapter mAdapter = new IndustrySliderAdapter(listIndData, this);
         mPager.setAdapter(mAdapter);
         mPager.setCurrentItem(position);
 

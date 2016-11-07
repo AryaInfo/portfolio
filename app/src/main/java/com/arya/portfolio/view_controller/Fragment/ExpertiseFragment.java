@@ -17,16 +17,12 @@ import com.arya.portfolio.dao.ExpertiseData;
 import java.util.ArrayList;
 import java.util.Observable;
 
-/**
- * Created by user on 12/10/16.
- */
 
 public class ExpertiseFragment extends AbstractFragment {
     private View view;
 
     private GridView gvExpertise;
     private ArrayList<ExpertiseData> expertiseListData = new ArrayList<>();
-    private ExpertiseAdapter expertiseAdapter;
 
     @Override
     protected View onCreateViewPost(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -46,7 +42,7 @@ public class ExpertiseFragment extends AbstractFragment {
     }
 
     private void setAdapter(ArrayList<ExpertiseData> expertiseListData) {
-        expertiseAdapter = new ExpertiseAdapter(getActivity(), expertiseListData);
+        ExpertiseAdapter expertiseAdapter = new ExpertiseAdapter(getActivity(), expertiseListData);
         gvExpertise.setAdapter(expertiseAdapter);
         expertiseAdapter.notifyDataSetChanged();
     }
