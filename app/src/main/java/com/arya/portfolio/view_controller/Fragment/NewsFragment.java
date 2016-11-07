@@ -188,11 +188,13 @@ public class NewsFragment extends AbstractFragment implements View.OnClickListen
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         //do nothing.
+        //overrided method.
     }
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
         //do nothing.
+        //overrided method.
     }
 
     @Override
