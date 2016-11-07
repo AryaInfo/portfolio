@@ -10,12 +10,7 @@ import com.arya.portfolio.R;
 
 import java.util.Observable;
 
-/**
- * Created by user on 15/10/16.
- */
-
 public class SplashActivity extends AbstractFragmentActivity {
-    private int SPLASH_TIME_OUT = 3000;
 
     @Override
     protected void onCreatePost(Bundle savedInstanceState) {
@@ -35,6 +30,7 @@ public class SplashActivity extends AbstractFragmentActivity {
     }
 
     private void openApp() {
+        int SPLASH_TIME_OUT = 3000;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

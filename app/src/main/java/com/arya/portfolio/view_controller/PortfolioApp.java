@@ -13,10 +13,6 @@ import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by user on 23/09/16.
- */
-
 public class PortfolioApp extends Application {
 
 
@@ -52,9 +48,7 @@ public class PortfolioApp extends Application {
                     final Field staticField = Typeface.class.getDeclaredField("sSystemFontMap");
                     staticField.setAccessible(true);
                     staticField.set(null, newMap);
-                } catch (NoSuchFieldException e) {
-                    e.printStackTrace();
-                } catch (IllegalAccessException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             } else {

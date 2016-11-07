@@ -21,7 +21,7 @@ import java.util.Observable;
 
 public class ChatWithUsFragment extends AbstractFragment implements View.OnClickListener {
     private View view;
-    private String string = "new string";
+    //private String string = "new string";
 
     @Override
     protected View onCreateViewPost(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -76,7 +76,7 @@ public class ChatWithUsFragment extends AbstractFragment implements View.OnClick
             aryaConnectClient.setThemeColor(R.color.color_green);
             aryaConnectClient.setTabTextColor(R.color.white);
         } catch (Exception e) {
-            //e.printStackTrace();
+            e.printStackTrace();
         }
     }
 
@@ -91,5 +91,4 @@ public class ChatWithUsFragment extends AbstractFragment implements View.OnClick
         arrayList.add(aryaSupport);
         return arrayList;
     }
-
 }

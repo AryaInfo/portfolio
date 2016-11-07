@@ -23,15 +23,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Observable;
 
-/**
- * Created by user on 28/10/16.
- */
-
 public class PortfolioList extends AbstractFragmentActivity implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener, AdapterView.OnItemClickListener {
 
     View inActionBarTilte;
     private ArrayList<PortfolioData> listData;
-    private PortfolioAdapter portfolioAdapter;
     int position;
     private GridView gvPortfolio;
     private SwipeRefreshLayout swipeRefreshPortfolio;
@@ -60,6 +55,7 @@ public class PortfolioList extends AbstractFragmentActivity implements View.OnCl
     private void init() {
 
         Bundle bundle = getIntent().getExtras();
+        //noinspection unchecked
         listData = ((ArrayList<PortfolioData>) bundle.getSerializable("listData"));
         position = bundle.getInt("position");
         title = bundle.getString("title");
@@ -106,7 +102,7 @@ public class PortfolioList extends AbstractFragmentActivity implements View.OnCl
         if (!listData.isEmpty()) {
             Collections.sort(listData, new PortfolioData());
             Collections.sort(listData, new PortfolioData());
-            portfolioAdapter = new PortfolioAdapter(this, listData);
+            PortfolioAdapter portfolioAdapter = new PortfolioAdapter(this, listData);
             gvPortfolio.setAdapter(portfolioAdapter);
             portfolioAdapter.notifyDataSetChanged();
             swipeRefreshPortfolio.setRefreshing(false);

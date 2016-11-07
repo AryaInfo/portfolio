@@ -35,9 +35,6 @@ import com.arya.portfolio.view_controller.fragment.UseCasesFragment;
 
 import java.util.Observable;
 
-/**
- * Created by user on 13/09/16.
- */
 public class SlidingMenuActivity extends AbstractFragmentActivity implements View.OnClickListener, SlidingPaneLayout.PanelSlideListener {
     private SlidingPaneLayout mSlidingPanel;
     private Bundle newsavedInstanceState;
