@@ -14,15 +14,13 @@ import android.view.ViewTreeObserver;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by user on 24/10/16.
- */
 
+/**
+ * The type Justified text view.
+ */
 public class JustifiedTextView extends View {
 
     private Context mContext;
-
-    private XmlToClassAttribHandler mXmlParser;
 
     private TextPaint textPaint;
 
@@ -32,28 +30,53 @@ public class JustifiedTextView extends View {
 
     private int textAreaWidth;
 
-    public int measuredViewHeight, measuredViewWidth;
+    /**
+     * The Measured view height.
+     */
+    public int measuredViewHeight,
+    /**
+     * The Measured view width.
+     */
+    measuredViewWidth;
 
     private String text;
 
-    private List<String> lineList = new ArrayList<String>();
+    private List<String> lineList = new ArrayList<>();
 
 
     /**
-     * when we want to draw text after view created to avoid loop in drawing we use this boolean
+     * The Has text been drown.
      */
     boolean hasTextBeenDrown = false;
 
+    /**
+     * Instantiates a new Justified text view.
+     *
+     * @param context  the context
+     * @param attrs    the attrs
+     * @param defStyle the def style
+     */
     public JustifiedTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         constructor(context, attrs);
     }
 
+    /**
+     * Instantiates a new Justified text view.
+     *
+     * @param context the context
+     * @param attrs   the attrs
+     */
     public JustifiedTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         constructor(context, attrs);
     }
 
+    /**
+     * Instantiates a new Justified text view.
+     *
+     * @param context the context
+     */
     public JustifiedTextView(Context context) {
         super(context);
         constructor(context, null);
@@ -63,7 +86,7 @@ public class JustifiedTextView extends View {
     private void constructor(Context context, AttributeSet attrs) {
 
         mContext = context;
-        mXmlParser = new XmlToClassAttribHandler(mContext, attrs);
+        XmlToClassAttribHandler mXmlParser = new XmlToClassAttribHandler(mContext, attrs);
         initTextPaint();
 
         if (attrs != null) {
@@ -135,12 +158,11 @@ public class JustifiedTextView extends View {
     }
 
 
-    private int rowIndex = 0, colIndex = 0;
-
     @Override
     protected void onDraw(Canvas canvas) {
 
-        rowIndex = getPaddingTop();
+        int rowIndex = getPaddingTop();
+        int colIndex;
         if (getAlignment() == Paint.Align.RIGHT)
             colIndex = getPaddingLeft() + getTextAreaWidth();
         else
@@ -155,23 +177,17 @@ public class JustifiedTextView extends View {
     }
 
 
-    /***
-     * this method get the string and divide it to a list of StringLines according to textAreaWidth
-     *
-     * @param originalText
-     * @return
-     */
     private List<String> divideOriginalTextToStringLineList(String originalText) {
 
-        List<String> listStringLine = new ArrayList<String>();
+        List<String> listStringLine = new ArrayList<>();
 
         String line = "";
         float textWidth;
 
         String[] listParageraphes = originalText.split("\n");
 
-        for (int j = 0; j < listParageraphes.length; j++) {
-            String[] arrayWords = listParageraphes[j].split(" ");
+        for (String listParageraphe : listParageraphes) {
+            String[] arrayWords = listParageraphe.split(" ");
 
             for (int i = 0; i < arrayWords.length; i++) {
 
@@ -218,17 +234,7 @@ public class JustifiedTextView extends View {
 
     }
 
-    public int getLineCount() {
-        return lineHeight;
-    }
 
-    /**
-     * this method add space in line until line width become equal to textAreaWidth
-     *
-     * @param lineString
-     * @param textAreaWidth
-     * @return
-     */
     private String justifyTextLine(TextPaint textPaint, String lineString, int textAreaWidth) {
 
         int gapIndex = 0;
@@ -252,11 +258,6 @@ public class JustifiedTextView extends View {
         return lineString;
     }
 
-    /***
-     * this method calculate height for a line of text according to defined TextPaint
-     *
-     * @param textPaint
-     */
     private void setLineHeight(TextPaint textPaint) {
 
         Rect bounds = new Rect();
@@ -267,12 +268,12 @@ public class JustifiedTextView extends View {
 
     }
 
-    /***
-     * this method calculate  view's height   according to line count and line height and view's width
+    /**
+     * Sets measured dimentions.
      *
-     * @param lineListSize
-     * @param lineHeigth
-     * @param lineSpace
+     * @param lineListSize the line list size
+     * @param lineHeigth   the line heigth
+     * @param lineSpace    the line space
      */
     public void setMeasuredDimentions(int lineListSize, int lineHeigth, int lineSpace) {
         int mHeight = lineListSize * (lineHeigth + lineSpace) + lineSpace;
@@ -317,16 +318,19 @@ public class JustifiedTextView extends View {
         this.lineHeight = lineHeight;
     }
 
+    /**
+     * Gets text.
+     *
+     * @return the text
+     */
     public String getText() {
         return text;
     }
 
-    /***
-     * Sets the string value of the JustifiedTextView. JustifiedTextView does not accept HTML-like formatting.
-     * Related XML Attributes
-     * -noghteh:text
+    /**
+     * Sets text.
      *
-     * @param text
+     * @param text the text
      */
     public void setText(String text) {
         this.text = text;
@@ -334,92 +338,89 @@ public class JustifiedTextView extends View {
         invalidate();
     }
 
-    public void setText(int resid) {
-        setText(mContext.getResources().getString(resid));
-    }
-
-    public Typeface getTypeFace() {
-        return getTextPaint().getTypeface();
-    }
-
+    /**
+     * Sets type face.
+     *
+     * @param typeFace the type face
+     */
     public void setTypeFace(Typeface typeFace) {
         getTextPaint().setTypeface(typeFace);
     }
 
-    public float getTextSize() {
-        return getTextPaint().getTextSize();
-    }
-
+    /**
+     * Gets text size.
+     *
+     * @param unit     the unit
+     * @param textSize the text size
+     */
     public void setTextSize(int unit, float textSize) {
         textSize = TypedValue.applyDimension(unit, textSize, mContext.getResources().getDisplayMetrics());
         setTextSize(textSize);
     }
 
+    /**
+     * Sets text size.
+     *
+     * @param textSize the text size
+     */
     public void setTextSize(float textSize) {
         getTextPaint().setTextSize(textSize);
         calculate();
         invalidate();
     }
 
+    /**
+     * Gets text paint.
+     *
+     * @return the text paint
+     */
     public TextPaint getTextPaint() {
         return textPaint;
     }
 
-    public void setTextPaint(TextPaint textPaint) {
-        this.textPaint = textPaint;
-    }
-
-    /***
-     * set text color
+    /**
+     * Sets text color.
      *
-     * @param textColor
+     * @param textColor the text color
      */
     public void setTextColor(int textColor) {
         getTextPaint().setColor(textColor);
         invalidate();
     }
 
-    /***
-     * define space between lines
+    /**
+     * Sets line spacing.
      *
-     * @param lineSpace
+     * @param lineSpace the line space
      */
     public void setLineSpacing(int lineSpace) {
         this.lineSpace = lineSpace;
         invalidate();
     }
 
-    /***
-     * @return text color
-     */
-    public int getTextColor() {
-        return getTextPaint().getColor();
-    }
-
-
-    /***
-     * space between lines - default is 0
+    /**
+     * Gets text color.
      *
-     * @return
+     * @return the text color
      */
     public int getLineSpace() {
         return lineSpace;
     }
 
 
-    /***
-     * get text alignment
+    /**
+     * Gets alignment.
      *
-     * @return
+     * @return the alignment
      */
     public Paint.Align getAlignment() {
         return getTextPaint().getTextAlign();
     }
 
-    /***
-     * Align text according to your language
+    /**
+     * Sets alignment.
      *
-     * @param align
+     * @param align the align
      */
     public void setAlignment(Paint.Align align) {
         getTextPaint().setTextAlign(align);

@@ -12,7 +12,7 @@ import org.json.JSONObject;
  * Created by ARCHANA on 19-07-2015.
  */
 public class NetworkResponse {
-    public static final int NET_RESP_SUCCESS = 1;
+    //public static final int NET_RESP_SUCCESS = 1;
 
 
 

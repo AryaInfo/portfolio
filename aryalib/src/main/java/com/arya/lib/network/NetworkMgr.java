@@ -4,7 +4,6 @@ package com.arya.lib.network;
  * Created by ARCHANA on 19-07-2015.
  */
 
-import android.os.Build;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
@@ -35,12 +34,12 @@ import java.net.URLEncoder;
 import java.util.zip.GZIPInputStream;
 
 public class NetworkMgr {
-    private static final String SPACE = " ";
+    //private static final String SPACE = " ";
     private static final String TAG = "NetworkMgr";
 
-    private static boolean isFROYODevice = (Build.VERSION.SDK_INT <= Build.VERSION_CODES.GINGERBREAD_MR1);
-    private static String tag = "AryaPortfolio";
-    private int count=0;
+    //private static boolean isFROYODevice = (Build.VERSION.SDK_INT <= Build.VERSION_CODES.GINGERBREAD_MR1);
+    //private static String tag = "AryaPortfolio";
+    //private int count=0;
 
 
     public static synchronized NetworkResponse httpPost(String httpUrl, String fieldName, String postData) {
@@ -351,8 +350,6 @@ public class NetworkMgr {
                     netResp.netRespCode = NetworkResponse.ResponseCode.EXCEPTION;
                     return netResp;
                 }
-                StringBuilder sb = new StringBuilder(1024);
-                int bytesRead = 0;
                 try {
                     String encoding = conn.getContentEncoding();
                     // NOTE: Need to check how to get encoding info from
