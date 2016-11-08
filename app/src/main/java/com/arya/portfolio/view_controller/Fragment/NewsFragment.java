@@ -37,7 +37,7 @@ public class NewsFragment extends AbstractFragment implements View.OnClickListen
     private TextView txtTechnologyNews;
     private TextView txtAryaNews;
     private TextView txtFavNews;
-    private TextView txtLastSelectedView;
+    private  TextView txtLastSelectedView;
     private GridView gvNews;
     private final NewsModel newsModel = new NewsModel();
     private NewsFragmentAdapter newsFragmentAdapter;
@@ -73,7 +73,7 @@ public class NewsFragment extends AbstractFragment implements View.OnClickListen
     public void update(Observable observable, Object data) {
         try {
             if (data instanceof ArrayList) {
-                ArrayList<NewsData> listFilter = ((ArrayList<NewsData>) data);
+                ArrayList<NewsData> listFilter = (ArrayList<NewsData>) data;
                 setAdapter(listFilter);
             }
         } catch (Exception e) {

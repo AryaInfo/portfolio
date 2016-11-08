@@ -78,34 +78,27 @@ public class JSONParser {
         youraddress = youraddress.replaceAll(" ", "%20");
         return getJSONFromUrl("http://maps.google.com/maps/api/geocode/json?address=" + youraddress + "&sensor=false");
     }
-    public String getAddressFromLatLong(String api_key,double latitude,double longitude)
-    {
-        try
-        {
-            String URL="https://maps.googleapis.com/maps/api/geocode/json?latlng=" +latitude + "," +longitude+ "&sensor=false";
-            if(api_key!=null&&!api_key.isEmpty())
-            {
-                URL="https://maps.googleapis.com/maps/api/geocode/json?key=" +api_key+ "&latlng=" +latitude + "," +longitude+ "&sensor=false";
+
+    public String getAddressFromLatLong(String api_key, double latitude, double longitude) {
+        try {
+            String URL = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude + "&sensor=false";
+            if (api_key != null && !api_key.isEmpty()) {
+                URL = "https://maps.googleapis.com/maps/api/geocode/json?key=" + api_key + "&latlng=" + latitude + "," + longitude + "&sensor=false";
             }
-            JSONObject responseObject=getJSONFromUrl(URL);
-            if(Util.checkValueForKey(responseObject,KEY_RESULTS))
-            {
-               JSONArray resultsArray= responseObject.getJSONArray(KEY_RESULTS);
-                if(resultsArray.length()>0)
-                {
-                    JSONObject object=resultsArray.getJSONObject(0);
-                    if(Util.checkValueForKey(object,KEY_FORMATTED_ADDRESS))
-                    {
-                        String address=object.getString(KEY_FORMATTED_ADDRESS);
-                        return  address;
+            JSONObject responseObject = getJSONFromUrl(URL);
+            if (Util.checkValueForKey(responseObject, KEY_RESULTS)) {
+                JSONArray resultsArray = responseObject.getJSONArray(KEY_RESULTS);
+                if (resultsArray.length() > 0) {
+                    JSONObject object = resultsArray.getJSONObject(0);
+                    if (Util.checkValueForKey(object, KEY_FORMATTED_ADDRESS)) {
+                        return object.getString(KEY_FORMATTED_ADDRESS);
                     }
                 }
             }
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        return  null;
+        return null;
     }
 
 }

@@ -23,6 +23,6 @@ public class Env {
     }
 
     public enum AppState {
-        STATE_VISIBLE, STATE_BACKGROUND;
+        STATE_VISIBLE, STATE_BACKGROUND
     }
 }

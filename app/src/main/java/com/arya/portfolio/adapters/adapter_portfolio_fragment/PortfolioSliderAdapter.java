@@ -25,11 +25,11 @@ import java.util.ArrayList;
 public class PortfolioSliderAdapter extends PagerAdapter {
     private ArrayList<PortfolioData> listData;
     private Context mContext;
-    private PortfolioSingleActivity portfolioSingleActivity;
+
     public PortfolioSliderAdapter(ArrayList<PortfolioData> listData, Context ctx, PortfolioSingleActivity portfolioSingleActivity) {
         this.listData = listData;
         this.mContext = ctx;
-        this.portfolioSingleActivity = portfolioSingleActivity;
+        PortfolioSingleActivity portfolioSingleActivity1 = portfolioSingleActivity;
     }
 
     @Override
@@ -94,7 +94,6 @@ public class PortfolioSliderAdapter extends PagerAdapter {
             txtWebLinkS.setText(listData.get(position).projectWeblink);
         }
         txtPlatformS.setText(listData.get(position).projectPlateform);
-
         if (TextUtils.isEmpty(listData.get(position).projectTechnology)) {
             txtSelectedTab.setText(mContext.getResources().getString(R.string.nodetails));
         } else {
@@ -102,7 +101,6 @@ public class PortfolioSliderAdapter extends PagerAdapter {
             setHeight(llSelectedTab);
         }
         if (TextUtils.isEmpty(listData.get(position).projectIOSLink)) {
-
             imgIOS.setVisibility(View.GONE);
         } else {
             imgIOS.setVisibility(View.VISIBLE);

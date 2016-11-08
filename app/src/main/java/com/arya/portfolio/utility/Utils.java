@@ -27,10 +27,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
-/**
- * Created by user on 17/09/16.
- */
 public class Utils {
     public static ProgressDialog progressDialog;
 
@@ -64,9 +60,6 @@ public class Utils {
             imagelink = imagelink.replaceAll("\"/>", "");
             imagelink = imagelink.replaceAll("<img src=\"", "");
             String[] parts = imagelink.split("http:");
-            for (int i = 0; i < parts.length; i++) {
-                parts[i] = parts[i];
-            }
             String img = "";
             if (parts.length != 0) {
                 if (parts.length == 2) {
@@ -148,6 +141,7 @@ public class Utils {
                     fos.close();
                     fis.close();
                 } catch (IOException ioe) {
+                    ioe.printStackTrace();
                 }
             }
         } catch (Exception e) {

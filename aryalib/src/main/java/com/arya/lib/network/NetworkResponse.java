@@ -1,6 +1,5 @@
 package com.arya.lib.network;
 
-import android.provider.SyncStateContract;
 import android.text.TextUtils;
 
 import com.arya.lib.utils.Util;
@@ -22,7 +21,7 @@ public class NetworkResponse {
 
         private final int code;
 
-        private ResponseCode(int code) {
+        ResponseCode(int code) {
             this.code = code;
         }
     }

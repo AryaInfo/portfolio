@@ -32,7 +32,6 @@ public class PortfolioSingleActivity extends AbstractFragmentActivity implements
             imgShareSingle;
     private ArrayList<PortfolioData> listData;
     public ViewPager mPager;
-    private PagerAdapter mAdapter;
     int position;
 
     @Override
@@ -91,7 +90,7 @@ public class PortfolioSingleActivity extends AbstractFragmentActivity implements
     private void setAdapter(ArrayList<PortfolioData> listData) {
         if (!listData.isEmpty()) {
             Collections.sort(listData, new PortfolioData());
-            mAdapter = new PortfolioSliderAdapter(this.listData, this, PortfolioSingleActivity.this);
+            PagerAdapter mAdapter = new PortfolioSliderAdapter(this.listData, this, PortfolioSingleActivity.this);
             mPager.setAdapter(mAdapter);
         } else {
             Util.showCenteredToast(Env.appContext, getResources().getString(R.string.nodetails));

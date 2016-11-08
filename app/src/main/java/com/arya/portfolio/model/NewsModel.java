@@ -21,10 +21,6 @@ import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
 
-/**
- * Created by user on 16/09/16.
- */
-
 public class NewsModel extends BasicModel {
 
     private RefreshNewsTask refreshNewsTask = null;
@@ -44,7 +40,7 @@ public class NewsModel extends BasicModel {
         }
     }
 
-    class RefreshNewsTask extends AsyncTask<String, Void, ArrayList<NewsData>> {
+    private class RefreshNewsTask extends AsyncTask<String, Void, ArrayList<NewsData>> {
 
         @Override
         protected ArrayList<NewsData> doInBackground(String... params) {
@@ -68,7 +64,7 @@ public class NewsModel extends BasicModel {
     }
 
 
-    class SetGetNewsTask extends AsyncTask<String, Void, ArrayList<NewsData>> {
+    private class SetGetNewsTask extends AsyncTask<String, Void, ArrayList<NewsData>> {
         @Override
         protected ArrayList<NewsData> doInBackground(String... params) {
             ArrayList<NewsData> listNews = null;
@@ -212,17 +208,13 @@ public class NewsModel extends BasicModel {
 
     }
 
-    public String getImageLink(String imagelink) {
+    private String getImageLink(String imagelink) {
         String img = "";
         try {
             imagelink = imagelink.replaceAll("\"/><img src=\"", "");
             imagelink = imagelink.replaceAll("\"/>", "");
             imagelink = imagelink.replaceAll("<img src=\"", "");
             String[] parts = imagelink.split("http:");
-            for (int i = 0; i < parts.length; i++) {
-                parts[i] = parts[i];
-            }
-
             if (parts.length != 0) {
                 if (parts.length == 2) {
                     img = "http:" + parts[1];
