@@ -29,7 +29,6 @@ public class PortfolioSliderAdapter extends PagerAdapter {
     public PortfolioSliderAdapter(ArrayList<PortfolioData> listData, Context ctx, PortfolioSingleActivity portfolioSingleActivity) {
         this.listData = listData;
         this.mContext = ctx;
-        PortfolioSingleActivity portfolioSingleActivity1 = portfolioSingleActivity;
     }
 
     @Override
