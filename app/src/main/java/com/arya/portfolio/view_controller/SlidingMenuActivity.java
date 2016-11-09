@@ -20,6 +20,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.arya.lib.init.Env;
 import com.arya.lib.model.BasicModel;
@@ -61,7 +62,7 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
     private ImageView[] listImageViews;
     private TextView[] listTextViews;
 
-    String string = "";
+    String string = "new string ";
 
 
     @Override
@@ -142,6 +143,8 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
             }
         } catch (Exception e) {
             // e.printStackTrace();
+        } finally {
+            Toast.makeText(this, "finally block", Toast.LENGTH_SHORT);
         }
 
 
