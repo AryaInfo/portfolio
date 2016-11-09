@@ -143,6 +143,8 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
         } catch (Exception e) {
             // e.printStackTrace();
         }
+
+
     }
 
     private void initAnimation() {
