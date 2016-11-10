@@ -143,8 +143,6 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
         } finally {
             Toast.makeText(this, "finally block", Toast.LENGTH_SHORT);
         }
-
-
     }
 
     private void initAnimation() {
