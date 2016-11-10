@@ -62,9 +62,6 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
     private ImageView[] listImageViews;
     private TextView[] listTextViews;
 
-    String string = "new string ";
-
-
     @Override
     protected void onCreatePost(Bundle savedInstanceState) {
         setContentView(R.layout.activity_slide_menu);
@@ -142,7 +139,7 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
                 displayView(0);
             }
         } catch (Exception e) {
-            // e.printStackTrace();
+            e.printStackTrace();
         } finally {
             Toast.makeText(this, "finally block", Toast.LENGTH_SHORT);
         }
@@ -251,9 +248,9 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
                 imgSearch.setVisibility(View.GONE);
                 actionBarTitle = getResources().getString(R.string.titleConnect);
                 break;
-            /*default:
+            default:
                 //do nothing
-                break;*/
+                break;
         }
         replaceFragment(fragment, actionBarTitle);
     }
