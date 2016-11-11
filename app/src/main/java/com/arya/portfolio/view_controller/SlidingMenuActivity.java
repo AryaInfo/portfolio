@@ -64,6 +64,7 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
     String s = "";
     int a = 10 / 0;
 
+
     @Override
     protected void onCreatePost(Bundle savedInstanceState) {
         setContentView(R.layout.activity_slide_menu);
@@ -136,9 +137,8 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
     private void openFragment() {
         try {
             if (newsavedInstanceState == null) {
-                if(true){
-                    displayView(0);
-                }
+
+                displayView(0);
             }
         } catch (Exception e) {
         }
