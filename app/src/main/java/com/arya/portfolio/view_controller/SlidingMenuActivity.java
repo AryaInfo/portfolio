@@ -20,7 +20,6 @@ import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.arya.lib.init.Env;
 import com.arya.lib.model.BasicModel;
@@ -82,8 +81,6 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
 
     @Override
     public void update(Observable observable, Object o) {
-        //Override update method.
-        //do nothing
     }
 
     private void init() {
@@ -139,12 +136,11 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
     private void openFragment() {
         try {
             if (newsavedInstanceState == null) {
-                displayView(0);
+                if(true){
+                    displayView(0);
+                }
             }
         } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            Toast.makeText(this, "finally block", Toast.LENGTH_SHORT);
         }
     }
 
@@ -203,9 +199,6 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
             case R.id.llConnect:
                 displayView(5);
                 break;
-            default:
-                //do nothing
-                break;
         }
     }
 
@@ -248,9 +241,6 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
                 fragment = new ConnectFragment();
                 imgSearch.setVisibility(View.GONE);
                 actionBarTitle = getResources().getString(R.string.titleConnect);
-                break;
-            default:
-                //do nothing
                 break;
         }
         replaceFragment(fragment, actionBarTitle);
