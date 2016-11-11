@@ -62,6 +62,8 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
     private ImageView[] listImageViews;
     private TextView[] listTextViews;
 
+    String s = "";
+
     @Override
     protected void onCreatePost(Bundle savedInstanceState) {
         setContentView(R.layout.activity_slide_menu);
@@ -252,7 +254,6 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
         }
         replaceFragment(fragment, actionBarTitle);
     }
-
 
     private void menuOpenClose() {
         if (mSlidingPanel.isOpen()) {
