@@ -141,6 +141,8 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
                 displayView(0);
             }
         } catch (Exception e) {
+            e.printStackTrace();
+            //error trace.
         }
     }
 
