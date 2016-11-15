@@ -64,6 +64,8 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
     String s = "";
     int a = 10 / 0;
 
+    int b = ""
+
 
     @Override
     protected void onCreatePost(Bundle savedInstanceState) {
