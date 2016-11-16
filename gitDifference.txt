@@ -1,0 +1,13 @@
+diff --git a/app/src/main/java/com/arya/portfolio/view_controller/SlidingMenuActivity.java b/app/src/main/java/com/arya/portfolio/view_controller/SlidingMenuActivity.java
+index 95ad93a..1f34987 100644
+--- a/app/src/main/java/com/arya/portfolio/view_controller/SlidingMenuActivity.java
++++ b/app/src/main/java/com/arya/portfolio/view_controller/SlidingMenuActivity.java
+@@ -62,7 +62,7 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
+     private TextView[] listTextViews;
+ 
+     String s = "";
+-    int a = 10 / 0;
++    //int a = 10 / 0;
+ 
+ 
+     @Override

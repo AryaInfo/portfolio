@@ -1,0 +1,185 @@
+commit 89721b6113d76f9633cbfff4660c9b11709633f1
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Tue Nov 15 12:12:21 2016 +0530
+
+    new changes done on  15/10(1)
+
+commit ecd581236492d64ffd97b2be7052932fcc465bf3
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Tue Nov 15 10:17:54 2016 +0530
+
+    new changes done on  15/10
+
+commit 54ef1f7b215c561c67fe71fbfa8458704a410087
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Mon Nov 14 12:22:11 2016 +0530
+
+    new changes done
+
+commit 75dfe3b497fb3c20ed78da6a9031ea268f5ac16b
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Fri Nov 11 18:33:36 2016 +0530
+
+    changes done gradle check11
+
+commit 902d7eadd64b5f48736a3cd151a30fb779214289
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Fri Nov 11 18:08:25 2016 +0530
+
+    changes done gradle check
+
+commit 79d6b8e0a3f4d6177615abbe918b6f4f1ea82377
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Fri Nov 11 16:32:28 2016 +0530
+
+    changes done for lint check
+
+commit 03ee902baef77f4a39cd8ab6efdc2b07af26b784
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Fri Nov 11 16:23:28 2016 +0530
+
+    error code 11
+
+commit a22149a869c7734fc411065a9f6e4c5abdbe6ea1
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Fri Nov 11 14:57:16 2016 +0530
+
+    error code
+
+commit c8581ddf798c15f66f49472efe8ec1480d7f51f8
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Fri Nov 11 14:37:05 2016 +0530
+
+    new push
+
+commit 838ca24471de5fbd66938221a95b5be2008d3011
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Fri Nov 11 14:33:55 2016 +0530
+
+    push code
+
+commit 52f3d3d4f732e83de5310e4e9ef8021e7b96ef63
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Fri Nov 11 14:16:22 2016 +0530
+
+    commit for jenkins
+
+commit 9a91e3eca15192a4830e74735928350b97b5b280
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Thu Nov 10 19:11:07 2016 +0530
+
+    sliding menu activity for email check-1 space manage
+
+commit d15d23414933527360b27fe700175a37436cc3c2
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Thu Nov 10 19:01:38 2016 +0530
+
+    sliding menu activity for email check
+
+commit 1998e05d7671d73cb86640dc0dc52728bb3a6d65
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Thu Nov 10 18:31:05 2016 +0530
+
+    new changes done portfolio
+
+commit 3b54596dce7868e06d9aa5cc8a4d2dd4e7826de7
+Author: deepika <deepika.kumawat@aryavratinfotech.com>
+Date:   Wed Nov 9 18:37:52 2016 +0530
+
+    new changes by deepika
+
+commit 061259e47d23a15cc09186bf24568150d91df8ef
+Author: deepika <deepika.kumawat@aryavratinfotech.com>
+Date:   Wed Nov 9 14:25:59 2016 +0530
+
+    new changes in java file by deepika
+
+commit fe0e5af59a988789b38c7946c6e48449b5c14cfd
+Author: deepika <deepika.kumawat@aryavratinfotech.com>
+Date:   Wed Nov 9 14:12:55 2016 +0530
+
+    new changes in java file by deepika
+
+commit 5b43bce7418a736a8ccaf0c20bbca3cd21b809f8
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Tue Nov 8 17:15:20 2016 +0530
+
+    new changes on 8nov-udpate1
+
+commit 21d0926a8ea053da96f2e37b1015a0d000734919
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Tue Nov 8 16:44:04 2016 +0530
+
+    new changes on 8nov-udpate
+
+commit 7c985d3e74785c95fde0b11fb2badde1fed3b0e2
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Tue Nov 8 16:34:56 2016 +0530
+
+    new changes on 8nov
+
+commit 376f4dcc70d87042658ac25980748d3be4b2d5a6
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Mon Nov 7 19:12:42 2016 +0530
+
+    changes in files issue resolved-1
+
+commit 322f15dfc65285c3f6eb5b40a3cca74f84cc1c4a
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Mon Nov 7 19:06:53 2016 +0530
+
+    changes in files issue resolved
+
+commit 8ab05db3855eea192f24d513305eafce07603d0b
+Author: deepika <deepika.kumawat@aryavratinfotech.com>
+Date:   Mon Nov 7 18:50:06 2016 +0530
+
+    changes in files
+
+commit c68dcb892a6679d73f3ec14cc61582d4f144c575
+Author: haroonchhipa <haroon.chhipa@aryavratinfotech.com>
+Date:   Mon Nov 7 18:34:07 2016 +0530
+
+    changes in files
+
+commit ea8123bf0532b64308f1ca8d560b0834ea1d9c40
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Mon Nov 7 17:40:57 2016 +0530
+
+    error code in file ChatWithUsFragment--1
+
+commit 165bb0683439f088e44180a5a2f4ee02978feb07
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Mon Nov 7 17:26:34 2016 +0530
+
+    error code in file ChatWithUsFragment
+
+commit d627f8258fbbc857c8fb81655cd83750505c0e2c
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Mon Nov 7 17:18:27 2016 +0530
+
+    correct file ChatWithUsFragment
+
+commit 60ce19f708ac1a8cca0cb18b9a8c127c103d00dc
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Mon Nov 7 11:44:37 2016 +0530
+
+    changes in view controller- fragment  diff user commit.
+
+commit 8de1a8c012e830fc989f61190ba1ec227c30f5c3
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Mon Nov 7 11:25:44 2016 +0530
+
+    changes in view controller- fragment
+
+commit 92f91aad028fb789014155b1d50af5116b7227e1
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Mon Nov 7 11:17:47 2016 +0530
+
+    changes in view controller
+
+commit 1afd5ec95b6f955214a5fbf3317b064ae071c740
+Author: haroon <haroon.chhipa@aryavratinfotech.com>
+Date:   Mon Nov 7 10:32:38 2016 +0530
+
+    initial commit
