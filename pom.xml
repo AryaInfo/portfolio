@@ -1,23 +1,5 @@
-<build>
-    <finalName>Unitconversion</finalName>
-
-    <plugins>
-        <plugin>
-            <configuration>
-                <checkstyleRules>
-                    <module name="Checker">
-                        <module name="FileTabCharacter">
-                            <property name="eachLine" value="true" />
-                        </module>
-                        <module name="TreeWalker">
-                            <module name="EmptyBlock" />
-                        </module>
-                    </module>
-                </checkstyleRules>
-            </configuration>
-        </plugin>
-        <!--OTHER PLUGINS-->
-
+<!--OTHER PLUGINS-->
+<plugins>
         <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>findbugs-maven-plugin</artifactId>
@@ -41,8 +23,23 @@
                 </execution>
             </executions>
         </plugin>
+
+<plugin>
+    <configuration>
+        <checkstyleRules>
+            <module name="Checker">
+                <module name="FileTabCharacter">
+                    <property name="eachLine" value="true" />
+                </module>
+                <module name="TreeWalker">
+                    <module name="EmptyBlock" />
+                </module>
+            </module>
+        </checkstyleRules>
+    </configuration>
+</plugin>
     </plugins>
-</build>
+
 <!--
 <reporting>
 <plugins>
