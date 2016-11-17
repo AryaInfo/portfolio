@@ -62,7 +62,7 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
     private TextView[] listTextViews;
 
     String s = "";
-    int a = 10 / 0;
+    //int a = 10 / 0;
 
 
     @Override
