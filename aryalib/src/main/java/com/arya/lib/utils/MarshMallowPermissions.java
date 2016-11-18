@@ -38,20 +38,12 @@ public class MarshMallowPermissions {
 
     public boolean checkPermissionForCamera() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public boolean checkPermissionForContacts() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission_group.CONTACTS);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public boolean checkPermissionForLocation() {
@@ -66,50 +58,28 @@ public class MarshMallowPermissions {
 
     public boolean checkPermissionForRecord() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.RECORD_AUDIO);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public boolean checkPermissionForPhone() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.CALL_PHONE);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public boolean checkPermissionForSensors() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission_group.SENSORS);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public boolean checkPermissionForSms() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission_group.SMS);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
     public boolean checkPermissionForExternalStorage() {
         int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE);
         int result1 = ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (result == PackageManager.PERMISSION_GRANTED || result1 == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-
-
-        }
+        return result == PackageManager.PERMISSION_GRANTED || result1 == PackageManager.PERMISSION_GRANTED;
     }
 
     public void requestPermissionForCalendar() {

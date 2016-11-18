@@ -144,7 +144,7 @@ public class NewsSingleActivity extends AbstractFragmentActivity implements View
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         imgBookMarkStar.setImageResource(listNewsData.get(viewPagerNews.getCurrentItem()).favrouite == 1 ? R.mipmap.ic_bookmark_star_active : R.mipmap.ic_bookmark_star);
-        imgBookMarkStar.setSelected(listNewsData.get(viewPagerNews.getCurrentItem()).favrouite == 1 ? true : false);
+        imgBookMarkStar.setSelected(listNewsData.get(viewPagerNews.getCurrentItem()).favrouite == 1);
     }
 
     @Override

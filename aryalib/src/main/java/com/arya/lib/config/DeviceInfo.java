@@ -1,10 +1,5 @@
 package com.arya.lib.config;
 
-import android.app.Activity;
-import android.content.Context;
-import android.os.Build;
-import android.telephony.TelephonyManager;
-
 public class DeviceInfo {
 	public static final String FLD_DEVICE_ID = "device_id";
 	public static final String FLD_SIM_OPERATOR = "sim_operator";
