@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 public class IndustrySingleActivity extends AbstractFragmentActivity implements View.OnClickListener {
-
+    public static final String TAG_SCREEN_UI = "Industry Screen";
     View inActionBarBack;
     ImageView imgBack,
             imgShareSingle;

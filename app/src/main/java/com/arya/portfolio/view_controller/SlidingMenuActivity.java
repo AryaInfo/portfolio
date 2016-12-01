@@ -36,6 +36,7 @@ import com.arya.portfolio.view_controller.fragment.UseCasesFragment;
 import java.util.Observable;
 
 public class SlidingMenuActivity extends AbstractFragmentActivity implements View.OnClickListener, SlidingPaneLayout.PanelSlideListener {
+    public static final String TAG_SCREEN_UI = "Home Screen";
     private SlidingPaneLayout mSlidingPanel;
     private Bundle newsavedInstanceState;
     public ImageView imgMenu,
@@ -60,10 +61,6 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
     public static final int PERMISSION_ALL = 11;
     private ImageView[] listImageViews;
     private TextView[] listTextViews;
-
-    String s = "";
-    int a = 10 / 0;
-    String string = "string";
 
 
     @Override
@@ -139,14 +136,14 @@ public class SlidingMenuActivity extends AbstractFragmentActivity implements Vie
         try {
             if (newsavedInstanceState == null) {
                 displayView(0);
-                if(true){
+                if (true) {
 
                 }
             }
         } catch (Exception e) {
             //e.printStackTrace();
             //error trace.
-            if(true){
+            if (true) {
 
             }
         }

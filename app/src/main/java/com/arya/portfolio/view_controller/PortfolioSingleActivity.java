@@ -26,7 +26,7 @@ import java.util.Observable;
  * Created by user on 15/09/16.
  */
 public class PortfolioSingleActivity extends AbstractFragmentActivity implements View.OnClickListener {
-
+    public static final String TAG_SCREEN_UI = "Product Single Screen";
     View inActionBarBack;
     ImageView imgBack,
             imgShareSingle;
