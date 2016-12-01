@@ -32,18 +32,19 @@ import java.util.Observable;
 
 
 public class NewsFragment extends AbstractFragment implements View.OnClickListener, AdapterView.OnItemClickListener, TextWatcher, SwipeRefreshLayout.OnRefreshListener {
-
+    // UI_SCREEN = "News List"
     private View view;
     private TextView txtTechnologyNews;
     private TextView txtAryaNews;
     private TextView txtFavNews;
-    private  TextView txtLastSelectedView;
+    private TextView txtLastSelectedView;
     private GridView gvNews;
     private final NewsModel newsModel = new NewsModel();
     private NewsFragmentAdapter newsFragmentAdapter;
     private SwipeRefreshLayout swipeRefreshNews;
     private ArrayList<NewsData> listAdapter = new ArrayList<>();
     private static final int REQUEST_CODE_NEWS = 102;
+
     @Override
     protected View onCreateViewPost(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (view == null) {

@@ -36,7 +36,7 @@ import com.arya.portfolio.view_controller.fragment.UseCasesFragment;
 import java.util.Observable;
 
 public class SlidingMenuActivity extends AbstractFragmentActivity implements View.OnClickListener, SlidingPaneLayout.PanelSlideListener {
-    public static final String TAG_SCREEN_UI = "Home Screen";
+    // UI_SCREEN = "Home Screen"
     private SlidingPaneLayout mSlidingPanel;
     private Bundle newsavedInstanceState;
     public ImageView imgMenu,

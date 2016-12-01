@@ -23,6 +23,7 @@ import java.util.Observable;
 
 
 public class ConnectFragment extends AbstractFragment implements View.OnClickListener {
+    // UI_SCREEN = "Connect"
     private View view;
     private ImageView imgUSAContactNo1, imgUSAContactNo2, imgINContactNo1, imgINContactNo2;
     private LinearLayout llEmailBusiness, llEmailSupport, llEmailInfo;

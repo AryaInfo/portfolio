@@ -19,8 +19,8 @@ import java.util.Observable;
 
 
 public class ExpertiseFragment extends AbstractFragment {
+    // UI_SCREEN = "Expertise List"
     private View view;
-
     private GridView gvExpertise;
     private ArrayList<ExpertiseData> expertiseListData = new ArrayList<>();
 

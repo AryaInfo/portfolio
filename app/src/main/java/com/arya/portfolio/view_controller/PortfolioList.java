@@ -24,7 +24,7 @@ import java.util.Collections;
 import java.util.Observable;
 
 public class PortfolioList extends AbstractFragmentActivity implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener, AdapterView.OnItemClickListener {
-    public static final String TAG_SCREEN_UI = "Product List";
+    // UI_SCREEN = "Product List"
     View inActionBarTilte;
     private ArrayList<PortfolioData> listData;
     int position;

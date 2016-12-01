@@ -11,7 +11,7 @@ import com.arya.portfolio.R;
 import java.util.Observable;
 
 public class SplashActivity extends AbstractFragmentActivity {
-    public static final String TAG_SCREEN_UI = "Splash Screen";
+    // UI_SCREEN = "Splash Screen"
 
     @Override
     protected void onCreatePost(Bundle savedInstanceState) {

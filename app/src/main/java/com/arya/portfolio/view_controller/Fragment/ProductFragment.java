@@ -27,6 +27,7 @@ import java.util.Collections;
 import java.util.Observable;
 
 public class ProductFragment extends AbstractFragment implements AdapterView.OnItemClickListener, SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
+    // UI_SCREEN = "Product List"
     private static final int REQUEST_CODE_PRODUCT = 105;
     View view;
     SwipeRefreshLayout swipeRefreshProduct;

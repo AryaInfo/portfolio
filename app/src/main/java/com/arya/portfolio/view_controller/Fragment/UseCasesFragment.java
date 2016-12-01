@@ -40,7 +40,7 @@ import java.util.Observable;
 
 
 public class UseCasesFragment extends AbstractFragment implements View.OnClickListener, AdapterView.OnItemClickListener, TextWatcher, SwipeRefreshLayout.OnRefreshListener {
-
+    // UI_SCREEN = "Use Cases"
     private View view;
     private TextView txtProductEngineering, txtIndustry, txtTechnologyUsed, txtLastSelectedView;
     private GridView gvProductEngineering;

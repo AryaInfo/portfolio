@@ -25,7 +25,7 @@ import java.util.Observable;
  * Created by user on 15/09/16.
  */
 public class NewsSingleActivity extends AbstractFragmentActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
-    public static final String TAG_SCREEN_UI = "News Screen";
+    // UI_SCREEN = "News Screen"
     View inActionBarTilte;
     ImageView imgBack,
             imgBookMarkStar,

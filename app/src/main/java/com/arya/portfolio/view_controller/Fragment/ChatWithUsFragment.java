@@ -20,6 +20,7 @@ import java.util.Observable;
 
 
 public class ChatWithUsFragment extends AbstractFragment implements View.OnClickListener {
+    // UI_SCREEN = "Chat With Us"
     private View view;
     //private String string = "new string";
 
