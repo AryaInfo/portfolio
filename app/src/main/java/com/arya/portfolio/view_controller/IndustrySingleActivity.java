@@ -17,6 +17,8 @@ import com.arya.portfolio.dao.IndustryData;
 import java.util.ArrayList;
 import java.util.Observable;
 
+//Rohit Parihar
+
 public class IndustrySingleActivity extends AbstractFragmentActivity implements View.OnClickListener {
     // UI_SCREEN = "Industry Screen"
     View inActionBarBack;
